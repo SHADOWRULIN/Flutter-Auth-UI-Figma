@@ -12,9 +12,7 @@ class LogInPage extends StatefulWidget {
 class _LogInPageState extends State<LogInPage> {
   void switchToSignUpPage() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const SignUpPage()
-      )
-    );
+        context, MaterialPageRoute(builder: (context) => const SignUpPage()));
   }
 
   @override
@@ -32,24 +30,22 @@ class _LogInPageState extends State<LogInPage> {
                 fit: BoxFit.fill,
               ),
               Positioned(
-                bottom: 140,
-                right: 30,
-                child: SizedBox(
-                  height: 40,
-                  width: 122,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5))),
-                    onPressed: switchToSignUpPage,
-                    child: Text(
-                      'SIGN UP',
-                      style: GoogleFonts.cambo(
-                          fontSize: 18, color: const Color(0xff2F80ED)),
-                    )
-                  ),
-                )
-              )
+                  bottom: 140,
+                  right: 30,
+                  child: SizedBox(
+                    height: 40,
+                    width: 122,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5))),
+                        onPressed: switchToSignUpPage,
+                        child: Text(
+                          'SIGN UP',
+                          style: GoogleFonts.cambo(
+                              fontSize: 18, color: const Color(0xff2F80ED)),
+                        )),
+                  ))
             ],
           ),
           Column(
