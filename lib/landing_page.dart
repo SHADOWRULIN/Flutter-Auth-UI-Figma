@@ -18,52 +18,54 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset(
-            "assets/top_banner.png",
-            height: 234,
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
-          Column(
-            children: [
-              Text(
-                "ANGLE SURE",
-                style: GoogleFonts.akayaTelivigala(
-                  fontSize: 36,
-                  color: const Color(0xff2F80ED),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              "assets/top_banner.png",
+              height: 234,
+              width: double.infinity,
+              fit: BoxFit.fill,
+            ),
+            Column(
+              children: [
+                Text(
+                  "ANGLE SURE",
+                  style: GoogleFonts.akayaTelivigala(
+                    fontSize: 36,
+                    color: const Color(0xff2F80ED),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Image.asset(
-                "assets/logo.png",
-                width: 220,
-                height: 200,
-              ),
-            ],
-          ),
-          Stack(
-            children: [
-              Image.asset(
-                "assets/bottom_banner.png",
-                width: double.infinity,
-                height: 264,
-                fit: BoxFit.fill,
-              ),
-              Positioned(
-                  bottom: 40,
-                  right: 20,
-                  child: ElevatedButton.icon(
-                      onPressed: switchToLoginPage,
-                      icon: const Icon(Icons.arrow_forward),
-                      label: const Text("Next")))
-            ],
-          )
-        ],
+                const SizedBox(
+                  height: 5,
+                ),
+                Image.asset(
+                  "assets/logo.png",
+                  width: 220,
+                  height: 200,
+                ),
+              ],
+            ),
+            Stack(
+              children: [
+                Image.asset(
+                  "assets/bottom_banner.png",
+                  width: double.infinity,
+                  height: 264,
+                  fit: BoxFit.fill,
+                ),
+                Positioned(
+                    bottom: 40,
+                    right: 20,
+                    child: ElevatedButton.icon(
+                        onPressed: switchToLoginPage,
+                        icon: const Icon(Icons.arrow_forward),
+                        label: const Text("Next")))
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
