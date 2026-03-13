@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_design/sign_up_ui.dart';
+import 'package:flutter_auth_ui_figma/sign_up_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LogInPage extends StatefulWidget {
