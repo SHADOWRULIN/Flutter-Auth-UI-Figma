@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:math';
+import 'package:flutter_auth_ui_figma/utils/password_generator.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -16,28 +16,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   String generatedPassword = '';
   void generatePassword() {
-    int length = 10;
-    bool includeNumberLetter = true;
-    bool includeSpecialChars = true;
-
-    const String numbersLetter =
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const String specialChars = '@\$&';
-
-    String character = '';
-
-    if (includeNumberLetter) character += numbersLetter;
-    if (includeSpecialChars) character += specialChars;
-
-    String password = '';
-
-    for (int i = 0; i < length; i++) {
-      int randomIndex = Random().nextInt(character.length);
-      password += character[randomIndex];
-    }
-
     setState(() {
-      generatedPassword = password;
+      generatedPassword = PasswordUtils.generateRandomPassword();
     });
   }
 

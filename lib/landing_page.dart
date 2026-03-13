@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_design/log_in_ui.dart';
+import 'package:flutter_auth_ui_figma/log_in_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LandingPage extends StatefulWidget {
@@ -12,9 +12,7 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   void switchToLoginPage() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const LogInPage()
-      )
-    );
+        context, MaterialPageRoute(builder: (context) => const LogInPage()));
   }
 
   @override
@@ -57,14 +55,12 @@ class _LandingPageState extends State<LandingPage> {
                 fit: BoxFit.fill,
               ),
               Positioned(
-                bottom: 40,
-                right: 20,
-                child: ElevatedButton.icon(
-                  onPressed: switchToLoginPage,
-                  icon: const Icon(Icons.arrow_forward),
-                  label: const Text("Next")
-                )
-              )
+                  bottom: 40,
+                  right: 20,
+                  child: ElevatedButton.icon(
+                      onPressed: switchToLoginPage,
+                      icon: const Icon(Icons.arrow_forward),
+                      label: const Text("Next")))
             ],
           )
         ],
